@@ -3,9 +3,8 @@ const routes = express.Router();
 
 const ToolController = require('./controllers/ToolController');
 
-routes.get('/tools', ToolController.listAll);
+routes.get('/tools', ToolController.list);
 routes.post('/tools', ToolController.register);
-routes.get('/tool', ToolController.listTag);
 routes.delete('/tools/:id', ToolController.delete);
 
 module.exports = routes;
