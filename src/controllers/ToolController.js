@@ -14,9 +14,10 @@ module.exports = {
         }
     },
     async register(req, res) {
-        const tool = await Tool.create(req.body);
+            const tool = await Tool.create(req.body);
 
-        return res.json(tool);
+            return res.json(tool);
+
     },
     async delete(req,res){
         await Tool.findByIdAndRemove(req.params.id);
